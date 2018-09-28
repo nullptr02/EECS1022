@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zero</string>
+    <string name="s0">ZERO</string>
+    <string name="s1">UNO</string>
+    <string name="s2">DUE</string>
+    <string name="s3">TRE</string>
+    <string name="s4">QUATTRO</string>
+    <string name="s5">CINQ</string>
+    <string name="s6">SEI</string>
+    <string name="s7">SETTE</string>
+    <string name="s8">OTTO</string>
+</resources>
