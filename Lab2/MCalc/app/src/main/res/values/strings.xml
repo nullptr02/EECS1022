@@ -3,9 +3,9 @@
 
 
     <string name="s0">Principle (in dollars)</string>
-    <string name="s1">ONE</string>
-    <string name="s2">TWO</string>
-    <string name="s3">THREE</string>
+    <string name="s1">Amortization (in years)</string>
+    <string name="s2">Interest (as annual percent)</string>
+    <string name="s3">MONTHLY PAYMENT</string>
     <string name="s4">FOUR</string>
     <string name="s5">FIVE</string>
     <string name="s6">SIX</string>

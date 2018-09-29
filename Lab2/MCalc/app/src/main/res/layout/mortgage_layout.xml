@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MortgageModel">
+    tools:context=".EntryForm">
 
     <TextView
         android:id="@+id/principleLabel"
@@ -44,7 +44,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:text="Amortization (in years)"
+        android:text="@string/s1"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -74,7 +74,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:text="Interest (as ana nnual percent)"
+        android:text="@string/s2"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/interestLabel" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonClicked"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -105,7 +105,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="MONTHLY PAYMENT"
+        android:onClick="buttonClicked"
+        android:text="@string/s3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/interestBox" />
@@ -113,13 +114,18 @@
     <TextView
         android:id="@+id/answer"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="$4500.00"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonClicked" />
 </android.support.constraint.ConstraintLayout>
