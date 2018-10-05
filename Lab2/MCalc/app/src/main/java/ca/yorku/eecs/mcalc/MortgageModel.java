@@ -19,23 +19,38 @@ public class MortgageModel {
     }
 
     public String computePayment() {
-        double interest = this.interest/(100*12);
-        double amortization = this.amortization*12;
-        double index = (this.principle*interest)/(1-(1/(1+(amortization*interest)+ amortization*(amortization-1)*Math.pow(interest,2)/2)));
+        double interest = this.interest / (100 * 12);
+        double amortization = this.amortization * 12;
+        double index = (this.principle * interest) / (1 - (1 / (1 + (amortization * interest) + amortization * (amortization - 1) * Math.pow(interest, 2) / 2)));
         String result = String.format("%,.2f", index);
 
         return result;
 
     }
 
+    public String outstandingAfter(int x) {
 
-    public static void main(String[] args)
-    {
+        String s = computePayment();
+        //double payment = Double.valueOf(s);
+        //double payment = Double.parseDouble(computePayment());
+        double payment = 4.56;
+
+        double index = principle - ((payment / interest) - principle) * ((1 + Math.pow(interest, x) - 1));
+        String result = String.format("%,.2f", index);
+        return result;
+
+
+    }
+
+    public static void main(String[] args) {
+
+        int x = 20;
         Scanner input = new Scanner(System.in);
         PrintStream output = System.out;
 
-        MortgageModel model = new MortgageModel("700000", "25","2.75");
+        MortgageModel model = new MortgageModel("700000", "25", "2.75");
         output.println(model.computePayment());
+        System.out.println(model.outstandingAfter(x));
 
     }
 
