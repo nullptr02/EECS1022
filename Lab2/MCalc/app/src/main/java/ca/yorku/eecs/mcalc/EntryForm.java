@@ -15,7 +15,6 @@ public class EntryForm extends AppCompatActivity {
     }
 
 
-
     public void buttonClicked(View v) {
 
 
@@ -25,7 +24,7 @@ public class EntryForm extends AppCompatActivity {
         String amortization = ((EditText) findViewById(R.id.amortizationBox)).getText().toString();
         String interest = ((EditText) findViewById(R.id.interestBox)).getText().toString();
 
-        MortgageModel model = new MortgageModel(principle, amortization, interest );
+        MortgageModel model = new MortgageModel(principle, amortization, interest);
         String answer = "$" + model.computePayment();
 
         ((TextView) findViewById(R.id.answer)).setText(answer);
@@ -33,15 +32,14 @@ public class EntryForm extends AppCompatActivity {
 
     }
 
-    public void buttonClicked2(View v)
-    {
+    public void buttonClicked2(View v) {
         View principleView = findViewById(R.id.principleBox);
         EditText principleEdit = (EditText) principleView;
         String principle = principleEdit.getText().toString();
         String amortization = ((EditText) findViewById(R.id.amortizationBox)).getText().toString();
         String interest = ((EditText) findViewById(R.id.interestBox)).getText().toString();
 
-        MortgageModel model = new MortgageModel(principle, amortization, interest );
+        MortgageModel model = new MortgageModel(principle, amortization, interest);
 
         int x = 20 * 12;
         String answer2 = "$" + model.outstandingAfter(x);
