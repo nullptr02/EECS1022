@@ -48,28 +48,27 @@ public class MCalcPro_Activity extends AppCompatActivity implements TextToSpeech
             s += String.format("%8s %15s", "n", "Balance");
             s += "\n\n";
 
-            for (int i = 1; i <= years; i++) {
 
-                if (i < 5) {
-                    s += String.format("%8d", i) + mp.outstandingAfter(i, "%,16.0f");
-                    s += "\n\n";
-                    ((TextView) findViewById(R.id.output)).setText(s);
-                } else if (i == 10) {
-                    s += String.format("%8d", i) + mp.outstandingAfter(i, "%,16.0f");
-                    s += "\n\n";
-                    ((TextView) findViewById(R.id.output)).setText(s);
-                } else if (i == 15) {
-                    s += String.format("%8d", i) + mp.outstandingAfter(i, "%,16.0f");
-                    s += "\n\n";
-                    ((TextView) findViewById(R.id.output)).setText(s);
-                } else if (i == 20) {
-                    s += String.format("%8d", i) + mp.outstandingAfter(i, "%,16.0f");
-                    s += "\n\n";
-                    ((TextView) findViewById(R.id.output)).setText(s);
-                }
 
-                tts.speak(s, TextToSpeech.QUEUE_FLUSH, null);
+            for (int i = 0; i <= 5; i++){
+
+                s += String.format("%8d", i) + mp.outstandingAfter(i, "%,16.0f");
+                s += "\n\n";
+                ((TextView) findViewById(R.id.output)).setText(s);
+
             }
+
+
+            for (int i = 10; i <= 20; i+=5){
+
+                s += String.format("%8d", i) + mp.outstandingAfter(i, "%,16.0f");
+                s += "\n\n";
+                ((TextView) findViewById(R.id.output)).setText(s);
+
+            }
+
+            tts.speak(s, TextToSpeech.QUEUE_FLUSH, null);
+
 
         } catch (Exception e) {
             Toast label = Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT);
