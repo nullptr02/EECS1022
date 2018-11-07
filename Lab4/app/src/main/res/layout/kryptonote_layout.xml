@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KryptoNoteActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Cryptographic Key"
+        android:inputType="number"
+        android:textColor="#ffffff"
+        android:textColorHint="#666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/encrypt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="onEncrypt"
+        android:text="ENCRYPT"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toStartOf="@+id/decrypt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="onDecrypt"
+        android:text="DECYPT"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/file"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="File Name"
+        android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine"
+        android:textColor="#ffffff"
+        android:textColorHint="#666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/save"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="onSave"
+        android:text="SAVE"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toStartOf="@+id/load"
+        app:layout_constraintTop_toBottomOf="@+id/encrypt" />
+
+    <Button
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="onLoad"
+        android:text="LOAD"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decrypt" />
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="403dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save">
+
+        <EditText
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="..."
+            android:inputType="textCapCharacters|textCapWords|textCapSentences"
+            android:textColor="#ffffff"
+            android:textColorHint="#666666"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="161dp" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
