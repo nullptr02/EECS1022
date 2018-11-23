@@ -2,6 +2,7 @@ package ca.eecs.caps;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import ca.roumani.i2c.*;
 
@@ -18,22 +19,24 @@ public class Game {
 
         List<String> capitals = db.getCapitals();
         int n = capitals.size();
-        int x = (int) (n * Math.random());
-        String c = capitals.get(x);
+        int index = (int) (Math.random() * n);
+        String c = capitals.get(index);
+        //System.out.println(c);
 
         Map<String, Country> data = db.getData();
         Country ref = data.get(c);
+        //System.out.println(ref.toString());
 
-        if (Math.random() <0.5){
+        if (Math.random() < 0.5) {
 
-            String a = "What is the capital of " + c + " ?\n";
+            String a = "What is the capital of " + ref.getName() + "?" + "\n" + c;
 
             return a;
 
 
         } else {
 
-            String b = c + " is the capital of" + " ?\n";
+            String b = c + " is the capital of " + " ?\n" + ref.getName();
 
 
             return b;
