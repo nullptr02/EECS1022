@@ -28,22 +28,12 @@ public class Game {
         //System.out.println(ref.toString());
 
         if (Math.random() < 0.5) {
-
             String a = "What is the capital of " + ref.getName() + "?" + "\n" + c;
-
             return a;
-
-
         } else {
-
             String b = c + " is the capital of " + " ?\n" + ref.getName();
-
-
             return b;
-
         }
-
-
     }
 
 
